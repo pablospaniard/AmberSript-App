@@ -13,7 +13,7 @@ const composeEnhancers =
     window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ||
   compose
 
-const rootReducer = combineReducers({
+export const rootReducer = combineReducers({
   audio: audioReducer,
   text: textReducer
 })
