@@ -7,8 +7,24 @@ exports[`Layout should works properly Should match snapshot: Layout_snapshot_1 1
   <div
     class="MuiGrid-item-2 MuiGrid-grid-xs-12-41"
   >
-    <div>
-      Header
+    <div
+      class="MuiGrid-container-1 Header"
+    >
+      <div
+        class="MuiGrid-item-2 MuiGrid-grid-xs-2-31"
+      >
+        Logo
+      </div>
+      <div
+        class="MuiGrid-item-2 MuiGrid-grid-xs-8-37"
+      >
+        Your Ambers
+      </div>
+      <div
+        class="MuiGrid-item-2 MuiGrid-grid-xs-2-31"
+      >
+        Account
+      </div>
     </div>
   </div>
   <div
