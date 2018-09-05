@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout should works properly Should match snapshot: Layout_snapshot_1 1`] = `
+<div
+  class="MuiGrid-container-1 Layout"
+>
+  <div
+    class="MuiGrid-item-2 MuiGrid-grid-xs-12-41"
+  >
+    <div>
+      Header
+    </div>
+  </div>
+  <div
+    class="MuiGrid-item-2 MuiGrid-grid-xs-12-41"
+  >
+    <div>
+      Content
+    </div>
+  </div>
+</div>
+`;

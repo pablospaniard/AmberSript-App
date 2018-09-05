@@ -1,7 +1,7 @@
 import React from 'react'
 
-import styles from './App.scss'
+import LayoutContainer from '../../containers/LayoutContainer/LayoutContainer'
 
-const App = () => <div className={styles.App}>Works!</div>
+const App = () => <LayoutContainer />
 
 export default App

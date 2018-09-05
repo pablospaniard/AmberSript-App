@@ -1,0 +1,10 @@
+@import '../../scss/vars.scss';
+
+.Header {
+  background-color: $secondary;
+  height: 50px;
+  align-items: center;
+  text-align: center;
+  color: $primary;
+  font-size: 1.5rem;
+}

@@ -5,18 +5,14 @@ import { createStore, applyMiddleware, compose, combineReducers } from 'redux'
 import thunk from 'redux-thunk'
 
 import { App } from './components/App'
-import audioReducer from './store/reducers/audioReducer'
-import textReducer from './store/reducers/textReducer'
+import dataReducer from './store/reducers/reducer'
 
 const composeEnhancers =
   (process.env.NODE_ENV === 'development' &&
     window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ||
   compose
 
-export const rootReducer = combineReducers({
-  audio: audioReducer,
-  text: textReducer
-})
+const rootReducer = combineReducers({ data: dataReducer })
 
 const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))
 
