@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Layout should works properly Should match snapshot: Layout_snapshot_1 1`] = `
+exports[`Layout should works properly should match snapshot: Layout_snapshot_1 1`] = `
 <div
   class="MuiGrid-container-1 Layout"
 >
