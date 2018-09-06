@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Content should render properly should match snapshot: Content_snapshot_1 1`] = `
+<div
+  class="MuiGrid-container-1 Content"
+>
+  <div
+    class="MuiGrid-item-2 MuiGrid-grid-xs-12-41"
+  >
+    <div
+      class="MuiPaper-root-98 MuiPaper-elevation2-102 MuiPaper-rounded-99 Paper"
+    >
+      <h2
+        class="MuiTypography-root-125 MuiTypography-title-131"
+      >
+        test
+      </h2>
+      <div
+        class="Buttons"
+      >
+        <button
+          class="Button_Select null"
+          type="button"
+        >
+          Decode
+        </button>
+        <button
+          class="null Button_Delete"
+          type="button"
+        >
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

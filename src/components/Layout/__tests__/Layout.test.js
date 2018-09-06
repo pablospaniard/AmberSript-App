@@ -25,10 +25,15 @@ describe('Layout should works properly', () => {
 
   afterEach(cleanup)
 
-  it('Should match snapshot', () => {
+  it('should match snapshot', () => {
     const { container } = renderWithRedux(
       <Layout fetchData={fetchData} data={data} />
     )
     expect(container.firstChild).toMatchSnapshot('Layout_snapshot_1')
+  })
+
+  it('should show List if loading is false', () => {
+    const { getByText } = render(<Layout fetchData={fetchData} data={data} />)
+    getByText('Decode')
   })
 })

@@ -5,7 +5,7 @@ import Spinner from '../Spinner'
 describe('App should render properly', () => {
   afterEach(cleanup)
 
-  it('Should match snapshot', () => {
+  it('should match snapshot', () => {
     const { container } = render(<Spinner />)
     expect(container.firstChild).toMatchSnapshot('Spinner_snapshot_1')
   })
