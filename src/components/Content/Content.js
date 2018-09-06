@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Grid } from '@material-ui/core'
+import { saveAs } from 'file-saver/FileSaver'
 
 import { List, Item } from '../'
 import { Spinner } from '../UI'
@@ -25,7 +26,9 @@ class Content extends Component {
   }
 
   onSaveJSONHandler = () => {
-    alert('json saved')
+    const text = document.getElementById('save-text').innerText
+    var blob = new Blob([text], { type: 'text/plain;charset=utf-8' })
+    saveAs(blob, 'AmberScript_your_text.txt')
   }
 
   render() {

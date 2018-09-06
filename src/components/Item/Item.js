@@ -16,7 +16,7 @@ const Item = props => {
         <WaveSurfer src={src} />
       </Grid>
       <Grid item xs={12}>
-        <Paper className={styles.Paper}>
+        <Paper className={styles.Paper} id="save-text">
           {data.segments.map((segment, index) => {
             const words = segment.words.map(word => {
               return word['text']
@@ -27,7 +27,11 @@ const Item = props => {
                 key={index}
                 className={styles.Segment}
               >
-                <span contentEditable className={styles.Editable}>
+                <span
+                  contentEditable
+                  suppressContentEditableWarning
+                  className={styles.Editable}
+                >
                   {words.join(' ')}
                 </span>
               </Typography>
