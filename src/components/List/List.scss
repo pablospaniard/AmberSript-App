@@ -1,0 +1,11 @@
+@import '../../scss/vars.scss';
+
+.Paper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 75px;
+  width: 75vw;
+  margin: auto;
+  margin-top: 1rem;
+}

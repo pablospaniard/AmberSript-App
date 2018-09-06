@@ -1,0 +1,62 @@
+@import '../../../scss/vars.scss';
+
+.Button {
+  position: relative;
+  overflow: hidden;
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  border-radius: 0.2rem;
+  border: none;
+  color: white;
+  outline: none;
+
+  &:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    padding-top: 240%;
+    padding-left: 240%;
+    margin-left: -120%;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+  }
+
+  &_Select {
+    @extend .Button;
+    background-color: $primary;
+
+    &:hover {
+      background-color: lighten($primary, 15%);
+      cursor: pointer;
+    }
+
+    &:after {
+      background-color: darken($primary, 15%)
+    }
+  }
+
+  &_Delete {
+    @extend .Button;
+    background-color: $red;
+
+    &:hover {
+      background-color: lighten($red, 15%);
+      cursor: pointer;
+    }
+
+    &:after {
+      background-color: darken($red, 15%)
+    }
+  }
+}

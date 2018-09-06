@@ -28,7 +28,7 @@ class Layout extends Component {
 
 Layout.propTypes = {
   fetchData: PropTypes.func,
-  data: PropTypes.object,
+  data: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
   err: PropTypes.object,
   loading: PropTypes.bool
 }
