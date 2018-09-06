@@ -15,7 +15,7 @@ class WaveSurferUI extends Component {
   }
 
   componentDidMount = () => {
-    const { src } = this.props
+    const { src, onChangeTime } = this.props
     const wavesurfer = WaveSurfer.create({
       container: '#waveform',
       waveColor: '#62c8d5',
@@ -33,6 +33,10 @@ class WaveSurferUI extends Component {
       this.setState({
         loading: false
       })
+    })
+    wavesurfer.on('audioprocess', () => {
+      console.log(wavesurfer.getCurrentTime())
+      onChangeTime(wavesurfer.getCurrentTime())
     })
 
     this.setState({
@@ -83,7 +87,8 @@ class WaveSurferUI extends Component {
 }
 
 WaveSurferUI.propTypes = {
-  src: PropTypes.string
+  src: PropTypes.string,
+  onChangeTime: PropTypes.func
 }
 
 export default WaveSurferUI
