@@ -27,8 +27,9 @@ const Item = props => {
                 key={index}
                 className={styles.Segment}
               >
-                {' '}
-                {words.join(' ')}
+                <span contentEditable className={styles.Editable}>
+                  {words.join(' ')}
+                </span>
               </Typography>
             )
           })}
