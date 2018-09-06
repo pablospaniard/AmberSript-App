@@ -1,6 +1,6 @@
 {
   "name": "amberscript",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Amberscript Test App",
   "main": "index.js",
   "scripts": {
