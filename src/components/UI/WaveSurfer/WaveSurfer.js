@@ -48,6 +48,13 @@ class WaveSurferUI extends Component {
   onStopButtonHandler = () => {
     this.state.waveSurfer.stop()
   }
+
+  componentWillUnmount = () => {
+    const { waveSurfer } = this.state
+    if (waveSurfer) {
+      waveSurfer.stop()
+    }
+  }
   render() {
     const { loading } = this.state
     const spinner = (

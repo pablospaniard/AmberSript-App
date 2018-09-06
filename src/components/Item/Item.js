@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Grid } from '@material-ui/core'
+import { Grid, Paper, Typography } from '@material-ui/core'
 
 import { Button, WaveSurfer } from '../UI'
 import styles from './Item.scss'
 
 const Item = props => {
-  const { src, onSaveClick, onBackClick } = props
+  const { src, onSaveClick, onBackClick, data } = props
   return (
     <Grid container className={styles.Item}>
       <Grid item xs={12} style={{ textAlign: 'right' }}>
@@ -16,15 +16,26 @@ const Item = props => {
         <WaveSurfer src={src} />
       </Grid>
       <Grid item xs={12}>
-        Text
+        <Paper className={styles.Paper}>
+          {data.segments.map((segment, index) => {
+            const words = segment.words.map(word => {
+              return word['text']
+            })
+            return (
+              <Typography
+                variant="body1"
+                key={index}
+                className={styles.Segment}
+              >
+                {' '}
+                {words.join(' ')}
+              </Typography>
+            )
+          })}
+        </Paper>
       </Grid>
-      <Grid item xs={12}>
-        <Button
-          text="Save"
-          select
-          onButtonClick={onSaveClick}
-          style={{ textAlign: 'center' }}
-        />
+      <Grid item xs={12} style={{ justifyContent: 'center', display: 'flex' }}>
+        <Button text="Save" select onButtonClick={onSaveClick} />
       </Grid>
     </Grid>
   )

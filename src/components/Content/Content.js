@@ -48,6 +48,7 @@ class Content extends Component {
             src={src}
             onBackClick={this.onBackButtonHandler}
             onSaveClick={this.onSaveJSONHandler}
+            data={data}
           />
         )
         break
