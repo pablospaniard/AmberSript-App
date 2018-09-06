@@ -21,8 +21,9 @@ class Item extends Component {
     const { currentTime } = this.state
     return (
       <Grid container className={styles.Item}>
-        <Grid item xs={12} style={{ textAlign: 'right' }}>
-          <Button text="Back" delete onButtonClick={onBackClick} />
+        <Grid item xs={12}>
+          <Button text="Save Text" select onButtonClick={onSaveClick} />
+          <Button text="Cancel" delete onButtonClick={onBackClick} />
         </Grid>
         <Grid item xs={12}>
           <WaveSurfer
@@ -68,7 +69,7 @@ class Item extends Component {
           xs={12}
           style={{ justifyContent: 'center', display: 'flex' }}
         >
-          <Button text="Save" select onButtonClick={onSaveClick} />
+          <Button text="Save Text" select onButtonClick={onSaveClick} />
         </Grid>
       </Grid>
     )

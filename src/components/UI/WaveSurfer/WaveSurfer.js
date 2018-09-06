@@ -35,7 +35,10 @@ class WaveSurferUI extends Component {
       })
     })
     wavesurfer.on('audioprocess', () => {
-      console.log(wavesurfer.getCurrentTime())
+      onChangeTime(wavesurfer.getCurrentTime())
+    })
+
+    wavesurfer.on('seek', () => {
       onChangeTime(wavesurfer.getCurrentTime())
     })
 
