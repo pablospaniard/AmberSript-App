@@ -19,10 +19,16 @@ describe('Layout should works properly', () => {
 
   const fetchData = jest.fn()
 
+  const data = {
+    recordId: 'test'
+  }
+
   afterEach(cleanup)
 
   it('Should match snapshot', () => {
-    const { container } = renderWithRedux(<Layout fetchData={fetchData} />)
+    const { container } = renderWithRedux(
+      <Layout fetchData={fetchData} data={data} />
+    )
     expect(container.firstChild).toMatchSnapshot('Layout_snapshot_1')
   })
 })
