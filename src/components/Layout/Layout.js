@@ -12,14 +12,14 @@ class Layout extends Component {
   }
 
   render() {
-    const { data, err, loading } = this.props
+    const { data, err, loading, src } = this.props
     return (
       <Grid container className={styles.Layout}>
         <Grid item xs={12}>
           <Header />
         </Grid>
         <Grid item xs={12}>
-          <Content data={data} error={err} loading={loading} />
+          <Content data={data} error={err} loading={loading} src={src} />
         </Grid>
       </Grid>
     )
@@ -30,6 +30,7 @@ Layout.propTypes = {
   fetchData: PropTypes.func,
   data: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
   err: PropTypes.object,
+  src: PropTypes.string,
   loading: PropTypes.bool
 }
 

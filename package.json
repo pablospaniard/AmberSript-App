@@ -35,7 +35,7 @@
     "redux-thunk": "^2.3.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.0",
-    "waveform-data": "2.0.2"
+    "wavesurfer.js": "^2.0.6"
   },
   "devDependencies": {
     "babel": "^6.23.0",

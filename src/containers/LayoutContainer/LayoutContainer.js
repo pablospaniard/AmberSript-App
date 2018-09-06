@@ -3,8 +3,8 @@ import { Layout } from '../../components'
 import * as actions from '../../store/actions'
 
 const mapStateToProps = state => {
-  const { data, err, loading } = state.data
-  return { data, err, loading }
+  const { data, err, loading, src } = state.data
+  return { data, err, loading, src }
 }
 
 const mapDispatchToProps = dispatch => ({

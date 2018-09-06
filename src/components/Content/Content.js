@@ -30,7 +30,7 @@ class Content extends Component {
 
   render() {
     const { step } = this.state
-    const { data, error, loading } = this.props
+    const { data, error, loading, src } = this.props
     let content
     switch (step) {
       case 0:
@@ -45,7 +45,7 @@ class Content extends Component {
           <Spinner />
         ) : (
           <Item
-            data={data}
+            src={src}
             onBackClick={this.onBackButtonHandler}
             onSaveClick={this.onSaveJSONHandler}
           />
@@ -70,6 +70,7 @@ class Content extends Component {
 Content.propTypes = {
   data: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
   error: PropTypes.object,
+  src: PropTypes.string,
   loading: PropTypes.bool
 }
 
