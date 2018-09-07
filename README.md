@@ -1,5 +1,9 @@
 # Audio Decoder App
 
+## You can check app here: https://salty-forest-88930.herokuapp.com/
+
+(it could take up to 30 seconds to start app)
+
 ### Start the project:
 
 - clone this repo
