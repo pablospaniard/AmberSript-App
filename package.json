@@ -12,7 +12,7 @@
     "test:ci": "CI=true jest --env=jsdom --runInBand",
     "precommit": "lint-staged",
     "prepush": "yarn test:ci",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install && npm install --dev && npm run build"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install && npm run build"
   },
   "author": "Pavel Ivanov",
   "license": "ISC",
